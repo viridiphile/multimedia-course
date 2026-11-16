@@ -57,3 +57,32 @@ A normal network-connected machine can use `python -m pip install -r requirement
 - Ordered dataset fingerprint: `8cc29268d9b56fba8f6b1787e8cd191b38e84e01a6dc937a4a4e3e438c5c1d3d`.
 
 A report-only check launched from repository root initially could not import `src`. Added root `pytest.ini` with the Lab 1 Python path/test location so root and Lab 1 invocations resolve consistently. The report-only check then passed. The generated report now labels smoke runs prominently and records learned GeM p/source revision.
+
+## Complete intended evaluation — 2026-11-16 22:09–22:10 Asia/Shanghai
+
+From `1-image-retrieval/`:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR="$PWD/.mplconfig" TQDM_MININTERVAL=5 \
+  ../../multimedia-course-env/bin/python -u scripts/run_experiment.py \
+  --batch-size 16 --device mps
+```
+
+- Source commit: `4144793d2b766da136489e8a69a2e3ffd271379d`.
+- **7,200 valid real images; 200 queries; 7,000 gallery images; 1,000 ranked result rows.**
+- **Mean P@5 0.9970**, 198 queries at 1.0, `obj98__180` at 0.8 and `obj92__180` at 0.6; 0 queries at 0.0.
+- Apple MPS, batch 16. Descriptor extraction 44.9552835 s; pipeline 54.715422125 s. Started 14:09:19.576607 UTC, finished 14:10:14.292053 UTC.
+- Saved complete ranked CSV, per-query CSV, aggregate/config JSON, descriptors (local-only), case JSON, three figures, generated report draft and execution log.
+- Inspected the lowest-P@5 image figure: query object 92 and false results from object 61 are white cylindrical bottles with pale caps and dense dark labeling. Correct ranks 1–3 are nearby angles. The observation supports discussing fine identity discrimination; no causal feature attribution is claimed.
+- Copied actual figures into `reports/figures/`, prepared the Lab 1-only Markdown draft with all per-query values and a checked discussion. Final combined Word report remains deferred.
+- Validation-stage Git push initially failed with HTTP 408; checked remote head (still `25d90eb`) and retried a normal fast-forward push with `git -c http.postBuffer=52428800 -c http.version=HTTP/1.1 push origin main`. No force push or history rewrite.
+
+### Independent export verification and figure inspection
+
+`../../multimedia-course-env/bin/python scripts/verify_results.py --descriptors` passed for **all 200 queries and 1,000 ranked rows**, including recomputed exact cosine rankings, relevance, scores, per-query/mean P@5 and figure decoding. Result CSV SHA-256: `994832090a5a1e23929cd2e9c44e9a2753857a3e073dce8cfabfc207682d03f3`.
+
+Visually inspected the actual case figure and ten-example grid. The grid's overall title overlapped its first-row labels; adjusted only figure spacing and regenerated full/smoke grids from the saved actual CSV/manifest. No descriptors or numeric results changed. Copied refreshed figures into the report folder.
+
+A complete post-evaluation suite passed 18 tests (0 skips), 16 dependency deprecation warnings in 9.49 s. One final suite after the spacing fix follows in the final validation record. Original prior-work inventory hashes all still match; Labs 2 and 3 contain only their placeholder README files. All report Markdown figure links resolve.
+
+The validation-stage Git push retry succeeded: remote main advanced normally from `25d90eb` to `4144793`. Subsequent pushes use the successful HTTP/1.1/buffer settings without changing repository history.

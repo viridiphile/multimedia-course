@@ -1,0 +1,14 @@
+/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Checkpoint: retrievalSfM120k-vgg16-gem
+Source: https://cmp.felk.cvut.cz/cnnimageretrieval/data/networks/retrieval-SfM-120k/retrievalSfM120k-vgg16-gem-b4dcdc6.pth
+Local checkpoint: /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/weights/retrievalSfM120k-vgg16-gem.pth
+Input dimensions: 128x128 RGB
+Descriptor dimensions: 512
+Device: mps
+Extracting features:   0%|          | 0/13 [00:00<?, ?batch/s]Extracting features: 100%|██████████| 13/13 [00:01<00:00,  8.07batch/s]
+Extracting features:   0%|          | 0/438 [00:00<?, ?batch/s]Extracting features:  12%|█▏        | 51/438 [00:05<00:38, 10.11batch/s]Extracting features:  23%|██▎       | 102/438 [00:10<00:33, 10.13batch/s]Extracting features:  35%|███▌      | 154/438 [00:15<00:27, 10.17batch/s]Extracting features:  47%|████▋     | 205/438 [00:20<00:22, 10.14batch/s]Extracting features:  58%|█████▊    | 256/438 [00:25<00:18, 10.10batch/s]Extracting features:  70%|███████   | 307/438 [00:30<00:12, 10.12batch/s]Extracting features:  82%|████████▏ | 358/438 [00:35<00:07, 10.12batch/s]Extracting features:  93%|█████████▎| 409/438 [00:40<00:02, 10.11batch/s]Extracting features: 100%|██████████| 438/438 [00:43<00:00, 10.11batch/s]
+Evaluated 200 queries against 7000 gallery images. Mean P@5: 0.9970
+Results written under /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/results

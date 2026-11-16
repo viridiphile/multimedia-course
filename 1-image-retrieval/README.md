@@ -11,7 +11,7 @@ From this directory:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-lock.txt
 export MPLCONFIGDIR="$PWD/.mplconfig"
 ```
 
@@ -32,6 +32,20 @@ Dataset preparation downloads the [official Columbia ZIP](https://www.cs.columbi
 The smoke run validates all source data, then extracts only 4 queries and 210 gallery images. Its scores are **not** the final benchmark. Smoke flags require a separate output directory to protect final metrics. The final command omits both limits and evaluates every intended query.
 
 The CLI also supports `--weights PATH`, `--manifest PATH`, `--output-dir PATH`, `--batch-size N` and `--device auto|cpu|mps`. For CPU execution use `--device cpu`. Exact rerun command/device/versions are recorded in the saved experiment JSON; CPU and MPS can differ slightly numerically.
+
+## Measured final result
+
+The 2026-11-16 full run evaluated **200 queries against 7,000 gallery images**
+and obtained **mean P@5 = 0.9970**: 198 queries at 1.0, one at 0.8 and one at
+0.6 (997 relevant results out of 1,000 returned slots). Apple MPS, batch 16,
+512-dimensional descriptors, learned GeM p=2.9208486080169678; full pipeline
+54.7154 s. Exact results are in `results/metrics/experiment_metrics.json`.
+
+![Lowest-P@5 case: obj92 at 180 degrees](results/figures/case_analysis.png)
+
+The white-bottle query returns three correct views and two similarly shaped
+bottles with a different object ID. Inspect IDs, scores and relevance labels;
+visual resemblance does not establish physical-object identity.
 
 ## Dataset and protocol
 

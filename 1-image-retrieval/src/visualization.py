@@ -75,8 +75,8 @@ def plot_retrieval_examples(
             )
             axes[row_index, column].set_xticks([])
             axes[row_index, column].set_yticks([])
-    figure.suptitle("COIL-100 VGG16-GeM Top-5 retrieval examples", fontsize=16)
-    figure.tight_layout(rect=(0, 0, 1, 0.99))
+    figure.suptitle("COIL-100 VGG16-GeM Top-5 retrieval examples", fontsize=16, y=0.995)
+    figure.tight_layout(rect=(0, 0, 1, 0.97))
     _save_figure(figure, output_path, dpi=180)
 
 

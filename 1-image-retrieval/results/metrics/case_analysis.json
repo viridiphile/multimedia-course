@@ -1,0 +1,73 @@
+{
+  "query_id": "obj92__180",
+  "query_object_id": 92,
+  "query_angle": 180,
+  "precision_at_5": 0.6,
+  "results": [
+    {
+      "query_id": "obj92__180",
+      "query_filename": "obj92__180.png",
+      "query_object_id": 92,
+      "query_angle": 180,
+      "rank": 1,
+      "image_id": "obj92__175",
+      "filename": "obj92__175.png",
+      "object_id": 92,
+      "angle": 175,
+      "similarity": 0.9983373880386353,
+      "relevant": true
+    },
+    {
+      "query_id": "obj92__180",
+      "query_filename": "obj92__180.png",
+      "query_object_id": 92,
+      "query_angle": 180,
+      "rank": 2,
+      "image_id": "obj92__185",
+      "filename": "obj92__185.png",
+      "object_id": 92,
+      "angle": 185,
+      "similarity": 0.9978058338165283,
+      "relevant": true
+    },
+    {
+      "query_id": "obj92__180",
+      "query_filename": "obj92__180.png",
+      "query_object_id": 92,
+      "query_angle": 180,
+      "rank": 3,
+      "image_id": "obj92__170",
+      "filename": "obj92__170.png",
+      "object_id": 92,
+      "angle": 170,
+      "similarity": 0.9941376447677612,
+      "relevant": true
+    },
+    {
+      "query_id": "obj92__180",
+      "query_filename": "obj92__180.png",
+      "query_object_id": 92,
+      "query_angle": 180,
+      "rank": 4,
+      "image_id": "obj61__170",
+      "filename": "obj61__170.png",
+      "object_id": 61,
+      "angle": 170,
+      "similarity": 0.992717981338501,
+      "relevant": false
+    },
+    {
+      "query_id": "obj92__180",
+      "query_filename": "obj92__180.png",
+      "query_object_id": 92,
+      "query_angle": 180,
+      "rank": 5,
+      "image_id": "obj61__175",
+      "filename": "obj61__175.png",
+      "object_id": 61,
+      "angle": 175,
+      "similarity": 0.9923752546310425,
+      "relevant": false
+    }
+  ]
+}

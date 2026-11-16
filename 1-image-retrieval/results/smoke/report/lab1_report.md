@@ -1,3 +1,5 @@
+**SMOKE RUN — 4 selected queries and 210 gallery images; not final benchmark results.**
+
 # Lab 1 — COIL-100 Image Retrieval
 
 ## Objective
