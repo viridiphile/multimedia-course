@@ -32,3 +32,27 @@ No Lab 2/3 implementation was discovered in this workspace. Those stages receive
 ## Status at audit commit
 
 No current-session tests, data downloads, checkpoint loading or retrieval evaluation have completed yet. Measurements will be recorded only after execution. Existing code will be copied into `1-image-retrieval/` and corrected in later commits; it is not represented as newly authored from scratch.
+
+## Completion status for user review
+
+The reused pipeline is now executed against the official complete COIL-100 archive
+and the named authors' SHA-256-verified checkpoint. The complete 200-query /
+7,000-gallery experiment measured mean P@5 0.9970. All 7,200 images were validated;
+198 queries scored 1.0, one 0.8 and one 0.6. All 18 automated checks ran without
+skips, including official GeM behavior and actual descriptors. Independent
+verification checked all 1,000 ranked rows and exact descriptor rankings.
+
+The main corrections were official HTTPS dataset preparation, local source/cache
+paths, portable validated manifests, checkpoint hash/legacy-metadata handling,
+cosine normalization at the ranking API boundary, explicit smoke segregation,
+run provenance and an independent verifier. Figure spacing was corrected after
+visual inspection using saved actual rankings. Original-file hashes still match;
+no prior implementation was discarded or overwritten.
+
+The environment and results are validated on this macOS arm64 machine (MPS for
+full inference, CPU for model unit checks). Other platforms and sparse-angle
+protocols have not been experimentally validated. Dependency deprecation warnings
+are recorded. The final combined Word report, Labs 2/3 execution and final
+student submission remain future work outside this authorization. There is no
+remaining Lab 1 execution blocker; the next required step is the user's review,
+not automatic progression to Lab 2.

@@ -86,3 +86,32 @@ Visually inspected the actual case figure and ten-example grid. The grid's overa
 A complete post-evaluation suite passed 18 tests (0 skips), 16 dependency deprecation warnings in 9.49 s. One final suite after the spacing fix follows in the final validation record. Original prior-work inventory hashes all still match; Labs 2 and 3 contain only their placeholder README files. All report Markdown figure links resolve.
 
 The validation-stage Git push retry succeeded: remote main advanced normally from `25d90eb` to `4144793`. Subsequent pushes use the successful HTTP/1.1/buffer settings without changing repository history.
+
+## Final validation and approval checkpoint
+
+After the figure spacing correction, reran the full suite with the same command:
+**18 passed, 0 skipped, 16 dependency deprecation warnings in 9.24 s**. Final
+console evidence is `results/final_test_execution.log` and JUnit evidence is
+`results/metrics/final_pytest.xml`. Repeated the independent descriptor verifier:
+**200 queries, 1,000 ranks, mean P@5 0.997**, all exact rankings and scores
+verified. The result CSV SHA-256 remains unchanged.
+
+Inspected the revised example grid: title and first-row IDs/scores are separated.
+Report figures match the actual saved results and all local Markdown figure links
+resolve. Original `../lab1/` hashes match the initial inventory. No data, weights,
+source cache, descriptors, environment, secrets or raw conversation backup are
+tracked. Labs 2 and 3 contain only placeholder README files.
+
+The results/documentation stage `f6a3c4c` was pushed successfully. The final
+`docs: finalize lab 1 validation and reproducibility` stage adds the disclosure,
+current audit status, genuine conversation export helper and final test evidence.
+See `git log --oneline --reverse` for the exact six stage commits. Push status
+and the final remote HEAD are independently checked before the completion reply.
+
+A genuine raw JSONL snapshot and visible-message extraction are preserved locally
+under ignored `docs/ai_logs/`, with explicit cutoff and SHA-256 provenance. The
+snapshot predates the completion response; refresh after this turn using the
+command in `docs/ai_usage.md` or use Codex CLI `/export session.md` when supported.
+
+**Lab 1 is implemented and validated, awaiting the user's explicit review.
+No user approval has been inferred. Stop here; Lab 2/3 remain unauthorized.**

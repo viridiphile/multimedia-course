@@ -370,3 +370,8 @@ This is a **Lab 1-only Markdown report draft**. It is ready to incorporate into
 the final Word report after the later labs are authorized and completed. No
 final three-lab Word document has been generated. The student should review the
 figures, interpretation and genuine AI interaction records before submission.
+
+Final validation after figure layout correction: **18 passed, 0 skipped**, with
+16 dependency deprecation warnings, in 9.24 s. Independent verification passed
+all 200 queries and 1,000 ranked positions, including exact cosine rankings.
+No unresolved Lab 1 execution blocker remains.
