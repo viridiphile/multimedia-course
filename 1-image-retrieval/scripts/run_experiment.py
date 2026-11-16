@@ -7,6 +7,7 @@ import argparse
 import platform
 import json
 import time
+import subprocess
 from datetime import datetime, timezone
 import importlib.metadata
 
@@ -144,7 +145,10 @@ def main() -> None:
     metrics_path = output / "metrics/experiment_metrics.json"
     write_results_csv(results, results_path)
 
+    revision = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True,
+                              cwd=Path(__file__).resolve().parents[2])
     config: Dict = {
+        "source_git_commit": revision.stdout.strip() if revision.returncode == 0 else None,
         "checkpoint_name": meta["checkpoint_name"],
         "checkpoint_url": meta["checkpoint_url"],
         "checkpoint_path": meta["checkpoint_path"],

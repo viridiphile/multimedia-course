@@ -1,0 +1,7 @@
+{
+  "queries_checked": 4,
+  "ranked_rows_checked": 20,
+  "mean_precision_at_5": 1.0,
+  "exact_descriptor_ranking_checked": true,
+  "results_csv_sha256": "64b17f02570ca70aee090cde7981a42621fcd3995bd06a279f557f8631a8acd1"
+}

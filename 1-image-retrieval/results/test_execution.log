@@ -1,0 +1,39 @@
+..................                                                       [100%]
+=============================== warnings summary ===============================
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:64
+  /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85
+  /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89
+  /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+../../multimedia-course-env/lib/python3.9/site-packages/matplotlib/_mathtext.py:45
+  /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+tests/test_pipeline.py::test_official_gem_matches_power_mean_and_differs_from_average
+  /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+    warnings.warn(
+
+tests/test_pipeline.py::test_official_gem_matches_power_mean_and_differs_from_average
+  /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+    warnings.warn(msg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/results/metrics/pytest.xml -
+18 passed, 16 warnings in 9.32s

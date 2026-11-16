@@ -1,0 +1,99 @@
+{
+  "checkpoint_name": "retrievalSfM120k-vgg16-gem",
+  "configuration": {
+    "architecture": "vgg16",
+    "batch_size": 8,
+    "checkpoint_name": "retrievalSfM120k-vgg16-gem",
+    "checkpoint_path": "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/weights/retrievalSfM120k-vgg16-gem.pth",
+    "checkpoint_sha256": "b4dcdc6b1dc22d9291a27417034a9fa608f697556d26116fafbfa99b5ce0ab95",
+    "checkpoint_url": "https://cmp.felk.cvut.cz/cnnimageretrieval/data/networks/retrieval-SfM-120k/retrievalSfM120k-vgg16-gem-b4dcdc6.pth",
+    "command": [
+      "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/bin/python",
+      "scripts/run_experiment.py",
+      "--smoke-objects",
+      "3",
+      "--max-queries",
+      "4",
+      "--batch-size",
+      "8",
+      "--device",
+      "auto",
+      "--output-dir",
+      "results/smoke"
+    ],
+    "dataset_fingerprint_sha256": "8cc29268d9b56fba8f6b1787e8cd191b38e84e01a6dc937a4a4e3e438c5c1d3d",
+    "dataset_url": "https://www.cs.columbia.edu/CAVE/databases/SLAM_coil-20_coil-100/coil-100/coil-100.zip",
+    "descriptor_dimensions": 512,
+    "device": "mps",
+    "elapsed_seconds": 15.617817250000002,
+    "finished_at_utc": "2026-11-16T14:07:14.039838+00:00",
+    "gallery_count": 210,
+    "gem_epsilon": 1e-06,
+    "gem_p": 2.9208486080169678,
+    "inference_seconds": 3.316647625,
+    "input_dimensions": "128x128 RGB",
+    "is_smoke_run": true,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "package_versions": {
+      "Pillow": "11.3.0",
+      "matplotlib": "3.9.4",
+      "numpy": "1.26.4",
+      "pytest": "8.4.2",
+      "scipy": "1.13.1",
+      "torch": "2.8.0",
+      "torchvision": "0.23.0",
+      "tqdm": "4.70.1"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "pooling": "gem",
+    "preprocessing": "native 128x128 RGB; ToTensor; checkpoint mean/std; no augmentation",
+    "python_version": "3.9.6",
+    "query_angles": [
+      0,
+      180
+    ],
+    "query_count": 4,
+    "relevance": "same COIL-100 object_id",
+    "seed": 0,
+    "split_randomized": false,
+    "started_at_utc": "2026-11-16T14:06:58.422011+00:00",
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "torch_version": "2.8.0",
+    "upstream_revision": "1e66a417afa2247edde6d35f3a9a2a465778a3a8",
+    "valid_dataset_images": 7200
+  },
+  "gallery_images": 210,
+  "mean_precision_at_5": 1.0,
+  "precision_at_5_distribution": {
+    "1.0": 4
+  },
+  "precision_at_5_per_query": [
+    {
+      "precision_at_5": 1.0,
+      "query_id": "obj1__0"
+    },
+    {
+      "precision_at_5": 1.0,
+      "query_id": "obj1__180"
+    },
+    {
+      "precision_at_5": 1.0,
+      "query_id": "obj2__0"
+    },
+    {
+      "precision_at_5": 1.0,
+      "query_id": "obj2__180"
+    }
+  ],
+  "queries_evaluated": 4,
+  "queries_precision_at_5_equal_0": 0,
+  "queries_precision_at_5_equal_1": 4
+}

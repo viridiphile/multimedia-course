@@ -16,6 +16,7 @@ import torch
 
 
 CHECKPOINT_NAME = "retrievalSfM120k-vgg16-gem"
+CHECKPOINT_SHA256 = "b4dcdc6b1dc22d9291a27417034a9fa608f697556d26116fafbfa99b5ce0ab95"
 OFFICIAL_REPOSITORY_REVISION = "1e66a417afa2247edde6d35f3a9a2a465778a3a8"
 OFFICIAL_SOURCE_URL = (
     "https://github.com/filipradenovic/cnnimageretrieval-pytorch/archive/"
@@ -66,9 +67,14 @@ def load_retrieval_model(
     if not checkpoint_path.is_file() or checkpoint_path.stat().st_size == 0:
         raise RuntimeError("Checkpoint is missing or empty: {}".format(checkpoint_path))
 
+    actual_hash = _sha256(checkpoint_path)
+    if actual_hash != CHECKPOINT_SHA256:
+        raise RuntimeError("Checkpoint SHA-256 differs from the verified official resource")
     try:
+        # The 2018 checkpoint includes NumPy whitening metadata. Its complete
+        # official SHA-256 is checked above before legacy deserialization.
         state = torch.load(
-            str(checkpoint_path), map_location="cpu", weights_only=True
+            str(checkpoint_path), map_location="cpu", weights_only=False
         )
     except Exception as exc:
         raise RuntimeError(

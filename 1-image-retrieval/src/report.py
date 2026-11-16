@@ -98,6 +98,11 @@ split because this experiment performs no model training.
 
 The network is the authors' pretrained **{checkpoint}** model: VGG16 with
 Generalized-Mean pooling, trained for image retrieval on retrieval-SfM-120k.
+The learned GeM exponent is **{gem_p}**, with epsilon 1e-6; this is not
+average pooling. The unmodified authors' network source is pinned to revision
+`{upstream_revision}`. No multiscale aggregation or additional discriminative
+whitening is applied. Images stay at native 128×128 resolution, an explicit
+choice differing from resized evaluation settings.
 RGB images are converted to tensors and normalized using channel mean/std
 stored in the official checkpoint. Inference is performed with gradients
 disabled. Descriptors are L2-normalized and ranked by cosine similarity
@@ -187,6 +192,8 @@ qualitative interpretation should be based on the generated case figure.
             query_count=config["query_count"],
             gallery_count=config["gallery_count"],
             checkpoint=config["checkpoint_name"],
+            gem_p=config.get("gem_p", "see saved experiment metadata"),
+            upstream_revision=config.get("upstream_revision", "see model source"),
             python_version=config["python_version"],
             platform=config["platform"],
             device=config["device"],
@@ -210,3 +217,8 @@ qualitative interpretation should be based on the generated case figure.
         ),
         encoding="utf-8",
     )
+
+    if config.get("is_smoke_run"):
+        text = output_path.read_text(encoding="utf-8")
+        output_path.write_text("**SMOKE RUN — limited queries/gallery; not final benchmark results.**\n\n" + text,
+                               encoding="utf-8")

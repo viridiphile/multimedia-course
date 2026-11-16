@@ -1,0 +1,28 @@
+Matplotlib is building the font cache; this may take a moment.
+Traceback (most recent call last):
+  File "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/src/model.py", line 74, in load_retrieval_model
+    state = torch.load(
+  File "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torch/serialization.py", line 1553, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy.core.multiarray._reconstruct was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy.core.multiarray._reconstruct])` or the `torch.serialization.safe_globals([numpy.core.multiarray._reconstruct])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/scripts/run_experiment.py", line 247, in <module>
+    main()
+  File "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/scripts/run_experiment.py", line 104, in main
+    model, meta, checkpoint_sha256 = load_retrieval_model(args.weights, device)
+  File "/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/src/model.py", line 78, in load_retrieval_model
+    raise RuntimeError(
+RuntimeError: Could not read the official checkpoint weights/retrievalSfM120k-vgg16-gem.pth. It may be incomplete or incompatible with this PyTorch version: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy.core.multiarray._reconstruct was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy.core.multiarray._reconstruct])` or the `torch.serialization.safe_globals([numpy.core.multiarray._reconstruct])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.

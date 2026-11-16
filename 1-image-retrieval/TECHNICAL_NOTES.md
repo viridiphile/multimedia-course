@@ -48,7 +48,8 @@ error; no fallback architecture is substituted.
 
 Official Columbia HTTPS download replaces optional undeclared mirror clients.
 The pinned unmodified upstream source is cached under local `vendor/`.
-Checkpoint deserialization uses `weights_only=True`; strict loading rejects
+Checkpoint deserialization first verifies the complete official SHA-256, then uses
+legacy `weights_only=False` for embedded NumPy metadata; strict loading rejects
 incompatible architectures. The learned GeM exponent and exact dataset fingerprint
 are saved. All source data and manifest labels are checked before extraction.
 Smoke output is kept separate. `verify_results.py` independently recomputes exact

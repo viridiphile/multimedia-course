@@ -1,0 +1,14 @@
+/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course-env/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Checkpoint: retrievalSfM120k-vgg16-gem
+Source: https://cmp.felk.cvut.cz/cnnimageretrieval/data/networks/retrieval-SfM-120k/retrievalSfM120k-vgg16-gem-b4dcdc6.pth
+Local checkpoint: /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/weights/retrievalSfM120k-vgg16-gem.pth
+Input dimensions: 128x128 RGB
+Descriptor dimensions: 512
+Device: mps
+Extracting features:   0%|          | 0/1 [00:00<?, ?batch/s]Extracting features: 100%|██████████| 1/1 [00:01<00:00,  1.86s/batch]
+Extracting features:   0%|          | 0/27 [00:00<?, ?batch/s]Extracting features: 100%|██████████| 27/27 [00:01<00:00, 18.76batch/s]
+Evaluated 4 queries against 210 gallery images. Mean P@5: 1.0000
+Results written under /Users/goverchuk/Desktop/Year 2 /multimedia/labs/multimedia-course/1-image-retrieval/results/smoke
