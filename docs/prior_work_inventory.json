@@ -1,0 +1,96 @@
+{
+  "source": "../lab1",
+  "observed_date": "2026-11-16",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 85,
+      "sha256": "156a641bbe9205ae84d8cddf625dee8ab855f2ab56e7acf2c9cc7520f1d24f75"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4963,
+      "sha256": "5e863f97f6b5ce8f9c84dd640ad1946c31b8fae4c4ad5426a6763cf909afa2a4"
+    },
+    {
+      "path": "TECHNICAL_NOTES.md",
+      "bytes": 2286,
+      "sha256": "4e1e92820f52e99012d2c5a41cbfd0f9095dac0a1ba7c6b93a10e4f59fcbbbde"
+    },
+    {
+      "path": "outputs/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 97,
+      "sha256": "64d1f1b3e31da2b97ac8114465dfee217e426c57aaac06ba0e2b362c4864690e"
+    },
+    {
+      "path": "scripts/prepare_dataset.py",
+      "bytes": 1261,
+      "sha256": "e543384af715d56e58df31f707f6546c9fb6a0ab1e97b6ba56dd07bf43c2e2d3"
+    },
+    {
+      "path": "scripts/run_experiment.py",
+      "bytes": 7130,
+      "sha256": "b62a85a708316c86d85351c29fc4663f7d642ad3db592e7acbcf35fc345b4c7e"
+    },
+    {
+      "path": "src/__init__.py",
+      "bytes": 43,
+      "sha256": "55362626fe04d603bed7d1a378c3dbeece4594d566b8d26a68e45b33dfb8fda9"
+    },
+    {
+      "path": "src/dataset.py",
+      "bytes": 10914,
+      "sha256": "3fb9d2bd4a4f68733f85b668849bcc33fc5e37a008a609ca4aafa108e5232f08"
+    },
+    {
+      "path": "src/evaluation.py",
+      "bytes": 2564,
+      "sha256": "aeb512b3a63f46e32f5e579097819702da9202ed7d80e171b50b50040a8d9488"
+    },
+    {
+      "path": "src/features.py",
+      "bytes": 3650,
+      "sha256": "2f25c93ab261519ecc0804db4079e847935551209a0f8986d340fafc84e131d3"
+    },
+    {
+      "path": "src/model.py",
+      "bytes": 7407,
+      "sha256": "41475764184dc7bd749011410b2218f2d07ee449898869929e14fac0c3bf08d8"
+    },
+    {
+      "path": "src/report.py",
+      "bytes": 7681,
+      "sha256": "c9869693ae9babda440b5c6f85e601e2a13720cf85b9ce77170b7966a5b034c1"
+    },
+    {
+      "path": "src/retrieval.py",
+      "bytes": 2600,
+      "sha256": "3fdc26176e95984799140174144737a42e7cda4b8c54f1d93af0111b37d0b7c6"
+    },
+    {
+      "path": "src/visualization.py",
+      "bytes": 5982,
+      "sha256": "d631d2d0e073ffafd170544483e1ceb210a46de7e074d41f5c1a262c80b7ab4c"
+    },
+    {
+      "path": "tests/test_dataset.py",
+      "bytes": 2213,
+      "sha256": "9fea680141ac1455f853c01eb0d34685d45b8ef66c8f21e562fb063b91fe4cfb"
+    },
+    {
+      "path": "tests/test_report.py",
+      "bytes": 1870,
+      "sha256": "da68f1b653226e0caa1d6c6b5c1b733fd5593f9f1783fade860b6cee64d28d6c"
+    },
+    {
+      "path": "tests/test_retrieval_evaluation.py",
+      "bytes": 2882,
+      "sha256": "69b242ef3808780c042233a9183717e5137efe9c993fc628746b451f42021441"
+    }
+  ]
+}
