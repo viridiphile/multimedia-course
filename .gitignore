@@ -1,0 +1,34 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.cache/
+.mplconfig/
+.DS_Store
+# Datasets, checkpoints, descriptors
+data/
+datasets/
+weights/
+checkpoints/
+vendor/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+*.zip
+*.tar
+*.gz
+# Secrets and temporary artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.part
+*.tmp
+# Raw local conversation backups stay local
+docs/ai_logs/
+# Preserve generated small figures and metrics under results/
