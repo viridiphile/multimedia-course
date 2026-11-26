@@ -176,3 +176,74 @@ frame similarity values from the saved descriptors.
 
 The Lab 2 work is ready for the student's local review. Lab 3 awaits
 explicit approval of Lab 2.
+
+## Lab 3 — 2026-11-27
+
+### Resources and identity
+
+- Created `3-video-summarization/.venv` with native CPython 3.9.6 and
+  PyTorch 2.8.0 on macOS arm64. Reinstalled the exact lockfile in a
+  separate fresh scratch environment and completed dataset preparation
+  there. Dependency checks passed.
+- Pinned DSNet to `1804176e2e8b57846beb063667448982273fca89`. The
+  Dropbox sharing endpoint reset during the first checkpoint attempt.
+  The direct-content host returned the published archive. Its ZIP
+  directory identified `pretrain_af_basic/checkpoint/tvsum.yml.3.pt`,
+  which was extracted and verified with CRC and SHA-256.
+- The TVSum feature ZIP directory identified the 125,126,256-byte
+  `eccv16_dataset_tvsum_google_pool5.h5` member. The exact member was
+  obtained by HTTP range and verified by CRC and SHA-256. The launcher
+  supports that member download, complete official archives and the
+  author's Google Drive feature backup. [Official DSNet resources](https://github.com/li-plus/DSNet)
+- Reused the complete TVSum original `EYqVtI9YWJA` and read the release
+  archive to obtain its metadata and annotations. Its catalog index
+  matches `video_42`. The HDF5 count, 20 official annotation lengths,
+  and decoded video all match at 5,939 frames. The correlation between
+  the per-pick mean official annotation and released HDF5 ground truth
+  was 0.9999999999999982. This video is in fold 3's `test_keys`, used
+  for validation by the authors.
+
+### Execution and measured output
+
+The official anchor-free model loaded the checkpoint strictly. Its
+confidence and raw intervals matched the upstream `predict` method on
+synthetic and real features. The full experiment evaluated all 396
+feature positions, retained 35 detections after 0.4 IoU NMS, and scored
+all 40 HDF5 shots. Knapsack selected 12 whole shots with no trimming.
+
+| Measurement | Actual result |
+|---|---:|
+| Source frames and duration | 5,939 frames · 198.165 s |
+| Frame budget | 890 |
+| Summary decoded frames and duration | 890 frames · 29.696 s |
+| Summary ratio | 14.9857% |
+| MP4 audio streams | 0 |
+| Decoded frames matched to source positions | 890 |
+
+The initial synthetic export used passthrough timing. Its stream duration
+was one frame short despite sequential presentation timestamps. Setting
+the encoder to the measured source CFR corrected the duration. The
+separate PyAV verifier decoded the actual MP4 and each expected source
+position. It checked count, cadence, resolution, aspect and stream types,
+and measured a maximum downsampled luma error of 0.459 on the 8-bit scale.
+Repeated launcher runs produced the same MP4 SHA-256. The figures were
+opened to inspect the decoded examples and model timeline.
+[Run data](../3-video-summarization/results/metrics/experiment_metrics.json) ·
+[Verification](../3-video-summarization/results/metrics/verification.json)
+
+### Tests and artifacts
+
+The first complete test run passed 18 of 19 tests. The remaining synthetic
+assertion expected a later solution for two equally optimal knapsack
+packs. The exhaustive case now has a unique optimum, and a separate
+assertion verifies the documented earlier-shot tie rule. The final run
+passed **19 tests (16 synthetic and 3 integration)** with zero failures
+and zero skips. The real integration test exported and validated the
+complete video in a separate output directory. Matplotlib emitted
+pyparsing deprecation warnings. [JUnit results](../3-video-summarization/results/metrics/pytest.xml)
+
+The local MP4 is at `3-video-summarization/results/summary.mp4`.
+The CSV and JSON results, four figures, report draft, and source code
+are available on the Lab 3 review branch. The combined Word report
+awaits the student's explicit Lab 3 approval.
+[Report draft](../reports/lab3_report.md) · [Reproduction instructions](../3-video-summarization/README.md)

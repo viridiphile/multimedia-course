@@ -122,3 +122,19 @@ to its covered feature bins, maps bins to original frames, averages
 scores over supplied shots, and selects whole shots with 0/1 knapsack.
 [DSNet source and resources](https://github.com/li-plus/DSNet) ·
 [TVSum release](https://people.csail.mit.edu/yalesong/tvsum/)
+
+### Lab 3 validation
+
+The delivered pipeline reuses the MIT-licensed anchor-free model,
+attention layers, temporal IoU, NMS, and TVSum split. The compatibility
+changes select the basic attention architecture under relative imports,
+use CPU and strictly restore the official state dictionary. Lab 3 adds
+asset handling, HDF5 identity checks, exact-budget dynamic programming,
+frame export, independent decoding, figures, and verification tests.
+
+The exact HDF5 feature bytes, original frame count and annotation
+correlation establish the selected video's mapping. The selected
+TVSum test key participates in the authors' validation set for
+checkpoint selection. The experiment measured 890 of 5,939 source
+frames, a 29.696-second silent MP4, and 19 passing tests on macOS arm64.
+[Experiment log](experiment_log.md) · [Lab 3 report draft](../reports/lab3_report.md)

@@ -98,3 +98,29 @@ python3 tools/export_visible_conversation.py \
 The visible-message export is suitable for the student to review before
 submission. The raw snapshot includes tool calls and results and stays
 local.
+
+## Lab 3 interaction record — 2026-11-27
+
+The student supplied the technical brief. Codex inspected the course
+repository, matched the existing complete TVSum original to the
+published HDF5 record, and used the authors' pretrained model, DSNet
+attention and anchor-free components, NMS, and split metadata. Codex
+implemented the Lab 3 compatibility wrapper, asset validation, budgeted
+shot selection, export, verification, visualizations and tests. It ran
+the actual pretrained experiment and drafted the Lab 3-only report
+from the measured results. The measured 890-frame MP4 remains local.
+The [experiment log](experiment_log.md) records the timing and test
+failure encountered during development and the final verification.
+
+The genuine Lab 3 interaction is in the same session as the earlier lab,
+`01a21946-5519-73e3-86fc-5a8a188297f3`. The ignored local folder
+`docs/ai_logs/lab3/` holds the exact Lab 3 brief, a raw JSONL snapshot
+of the session, a visible-message extraction and SHA-256 provenance.
+The extraction includes the earlier exchange in that same session.
+The command below refreshes the local snapshot after the turn is idle.
+
+```bash
+python3 tools/export_visible_conversation.py \
+  "$HOME/.codex/sessions/2026/11/27/rollout-2026-11-27T03-12-49-01a21946-5519-73e3-86fc-5a8a188297f3.jsonl" \
+  --output-dir docs/ai_logs/lab3
+```
