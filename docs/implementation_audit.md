@@ -98,3 +98,27 @@ tests passed on macOS arm64. The experiment exercises edited clips
 from known originals. Independently filmed viewpoints, larger galleries,
 and GPU execution remain outside the evaluated protocol.
 [Experiment log](experiment_log.md) · [Lab 2 report draft](../reports/lab2_report.md)
+
+## Lab 3 audit — 2026-11-27
+
+The user authorized Lab 3. Its directory contained a placeholder README
+and no implementation, data, tests, or results. GitHub's `lab2-visil`
+branch matched the local Lab 2 tip, and the existing three staged Lab 1
+edits were recorded. Lab 3 can read the locally cached original TVSum
+media without using retrieval code, descriptors, or results.
+
+DSNet revision `1804176e2e8b57846beb063667448982273fca89` provides the
+anchor-free architecture, offsets-to-bounds conversion, temporal NMS
+and the TVSum folds. It was developed with Python 3.6 and PyTorch 1.1.
+The basic model defaults are attention with eight heads, 1,024 input
+features and a 128-dimensional hidden layer. The authors invoke a 0.4
+NMS threshold for anchor-free evaluation.
+
+The experiment will match the TVSum HDF5 video identifier and actual
+decoded frame count before summarization. For the official fold, the
+split relationship will be recorded alongside the checkpoint. The
+reference score-to-shot logic assigns each selected detection's score
+to its covered feature bins, maps bins to original frames, averages
+scores over supplied shots, and selects whole shots with 0/1 knapsack.
+[DSNet source and resources](https://github.com/li-plus/DSNet) ·
+[TVSum release](https://people.csail.mit.edu/yalesong/tvsum/)
