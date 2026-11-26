@@ -56,3 +56,28 @@ are recorded. The final combined Word report, Labs 2/3 execution and final
 student submission remain future work outside this authorization. There is no
 remaining Lab 1 execution blocker; the next required step is the user's review,
 not automatic progression to Lab 2.
+
+## Lab 2 audit — 2026-11-27
+
+The user authorized Lab 2 for TVSum near-duplicate retrieval. The Lab 2
+directory had one tracked README and no implementation, tests, videos,
+checkpoints, or results. The outer workspace environments belong to prior
+work. Lab 2 now has a separate Python environment inside its own directory.
+Three pre-existing staged Lab 1 result edits were recorded before work began.
+
+The experiment uses the 50-video TVSum 1.1 release. The protocol selects two
+source IDs per category in lexical order and generates one strict 16-second
+interior clip from the first ID in each category. The selected originals
+make up the gallery. Only the overlapping source satisfies relevance.
+
+The ViSiL authors publish TensorFlow and PyTorch implementations. The
+PyTorch mirror contains the attention and comparator weights, while the
+separate PyTorch whitening URL on the original host failed. The alternate
+TensorFlow bundle published by the same author includes the ResNet model
+and its corresponding whitening data. The source revisions inspected were
+`0971e54fb8325fceb1bc9748ecbfe4c66e5dabd2` (TensorFlow) and
+`5751de6d7fdd48098b35c694aa250f2f1dad6a9f` (PyTorch).
+
+- [TVSum release files](https://people.csail.mit.edu/yalesong/tvsum/)
+- [ViSiL paper](https://arxiv.org/abs/1908.07410)
+- [Authors' checkpoint mirrors](https://github.com/MKLab-ITI/visil/issues/24)
