@@ -2,12 +2,13 @@
 
 import hashlib
 from pathlib import Path
+import re
 import shutil
 import struct
 import subprocess
 import tarfile
 from tempfile import TemporaryDirectory
-from zipfile import ZipFile
+from zipfile import BadZipFile, ZipFile
 import zlib
 
 
@@ -81,8 +82,11 @@ def zip_member(destination, zip_name, member, digest, urls, byte_range):
     with TemporaryDirectory(dir=directory) as work:
         pending = Path(work) / destination.name
         if provided_zip.is_file():
-            with ZipFile(provided_zip) as archive, archive.open(member) as source, pending.open("wb") as target:
-                shutil.copyfileobj(source, target)
+            try:
+                with ZipFile(provided_zip) as archive, archive.open(member) as source, pending.open("wb") as target:
+                    shutil.copyfileobj(source, target)
+            except (BadZipFile, KeyError) as error:
+                raise ValueError(f"Expected {member} in the published archive {provided_zip}") from error
         else:
             try:
                 download = Path(work) / "archive.part"
@@ -98,7 +102,7 @@ def zip_member(destination, zip_name, member, digest, urls, byte_range):
                             shutil.copyfileobj(source, target)
                         check_digest(pending, digest)
                         break
-                    except (subprocess.CalledProcessError, ValueError, KeyError):
+                    except (subprocess.CalledProcessError, BadZipFile, ValueError, KeyError):
                         continue
                 else:
                     raise RuntimeError(f"Unable to obtain {member}. Place the official ZIP at {provided_zip}.")
@@ -137,6 +141,8 @@ def tvsum_archive():
 
 def prepare_tvsum(video_id):
     """Use existing originals where available; extract only the requested video otherwise."""
+    if not re.fullmatch(r"[A-Za-z0-9_-]{11}", video_id):
+        raise ValueError(f"Invalid TVSum video identifier: {video_id}")
     data = LAB / "data"
     data.mkdir(parents=True, exist_ok=True)
     cache = data / "tvsum"

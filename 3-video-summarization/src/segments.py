@@ -2,7 +2,6 @@
 
 from dataclasses import dataclass
 
-
 import numpy as np
 
 
@@ -49,7 +48,7 @@ def choose_shots(record, bin_scores):
     widths = np.diff(np.append(record.picks, record.n_frames))
     frame_scores = np.repeat(bin_scores, widths)
     scores = np.array([frame_scores[start:end + 1].mean() for start, end in record.shots])
-    # Match upstream scalar conversion (Python float promotion on NumPy 1.x).
+    # Match the reference integer shot values used in knapsack.
     values = [int(1000 * score) for score in scores]
     winners = knapsack(values, record.shot_lengths, frame_budget(record.n_frames))
     segments = [
