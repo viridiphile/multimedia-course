@@ -115,3 +115,64 @@ command in `docs/ai_usage.md` or use Codex CLI `/export session.md` when support
 
 **Lab 1 is implemented and validated, awaiting the user's explicit review.
 No user approval has been inferred. Stop here; Lab 2/3 remain unauthorized.**
+
+## Lab 2 — 2026-11-27
+
+### Resources and compatibility
+
+- Lab 2 started from a README placeholder. The isolated environment was
+  created under `2-video-retrieval/.venv` with CPython 3.9.6 on macOS arm64.
+- The official TVSum 1.1 archive was downloaded from MIT and hashed as
+  `407d340bcd06fdc6d17374ebe6760b4a96816bcace228559c8283d9fb2520dea`.
+  All 50 original videos were inventoried, totaling 681,259,038 bytes.
+- The original ViSiL model host failed over HTTP and HTTPS. The author's
+  PyTorch mirror supplied the learned head, but the matching PCA file
+  was hosted separately. The author's TensorFlow archive contained the
+  complete pretrained ResNet inference graph and matching weights.
+  [Checkpoint mirror](https://github.com/MKLab-ITI/visil/issues/24)
+- The first PyAV installation attempt required a source build with
+  `pkg-config` and FFmpeg development files. The pinned OpenCV and
+  bundled FFmpeg wheels provided decoding and encoding.
+- The first restore attempt failed with `No variables to save` because
+  the legacy Saver executed outside the imported graph context.
+  Restoring inside that context resolved the error. TensorFlow 2.16.2
+  imported the published graph through `tf.compat.v1`, clearing the
+  saved device assignments for CPU inference.
+
+### Measured runs
+
+| Profile | Inventoried originals | Queries | Gallery | Scored pairs | Top-3 hits | Elapsed |
+|---|---:|---:|---:|---:|---:|---:|
+| Smoke | 50 | 2 | 4 | 8 | 2/2 (100%) | 24.9 s |
+| Full | 50 | 10 | 20 | 200 | 10/10 (100%) | 182.5 s |
+
+The full run reused descriptors from the smoke profile for four gallery
+videos and two queries. All 10 source originals ranked first. The full
+gallery decode read 115,960 frames and sampled 4,163. The transformed
+queries sampled 160 frames in total.
+
+The standalone verifier checked 200 ranked rows, the exact Top-3
+subset, source overlap labels, ties and the hit numerator and denominator.
+The featured `98MoyGZKHXc` temporal matrix independently reproduced a
+score of 0.9522336. Both figures were opened and visually inspected.
+[Full verification](../2-video-retrieval/results/metrics/verification.json) ·
+[Smoke verification](../2-video-retrieval/results/smoke/metrics/verification.json)
+
+### Testing and rerun
+
+Eight synthetic checks passed. The complete test suite passed 12 tests
+with zero failures and zero skips, including actual TVSum inventory,
+checkpoint restore, region descriptors, independent regional Chamfer
+calculation, and saved smoke/full output verification. Matplotlib
+reported pyparsing deprecations, and TensorFlow's imports reported
+urllib3's warning about the system Python's LibreSSL. The launcher uses
+curl for dataset and checkpoint transfers. [JUnit output](../2-video-retrieval/results/metrics/pytest.xml)
+
+The README launcher was exercised for setup, smoke, full, test, and
+both verification profiles. A full replay from the workspace parent
+into an isolated output directory reproduced the rankings and exported
+frame similarity values from the saved descriptors.
+[Reproduction commands](../2-video-retrieval/README.md)
+
+The Lab 2 work is ready for the student's local review. Lab 3 awaits
+explicit approval of Lab 2.

@@ -81,3 +81,20 @@ and its corresponding whitening data. The source revisions inspected were
 - [TVSum release files](https://people.csail.mit.edu/yalesong/tvsum/)
 - [ViSiL paper](https://arxiv.org/abs/1908.07410)
 - [Authors' checkpoint mirrors](https://github.com/MKLab-ITI/visil/issues/24)
+
+### Lab 2 validation
+
+The completed implementation reuses the authors' serialized inference
+operations and pretrained parameters. The Lab 2 code supplies local
+asset preparation, query generation, CPU session setup, feature
+caching, protocol labels, ranking, visualization, and verification.
+The graph supplies PCA whitening, regional attention, frame similarity,
+learned temporal refinement, and the final video score.
+
+Smoke tested two queries against four gallery originals. The complete
+experiment evaluated ten queries against twenty originals. Both
+profiles retrieved every relevant source at rank 1. All twelve
+tests passed on macOS arm64. The experiment exercises edited clips
+from known originals. Independently filmed viewpoints, larger galleries,
+and GPU execution remain outside the evaluated protocol.
+[Experiment log](experiment_log.md) · [Lab 2 report draft](../reports/lab2_report.md)

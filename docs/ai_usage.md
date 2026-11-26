@@ -61,3 +61,40 @@ stages correspond to actual completed work; failed transport/checkpoint attempts
 and their fixes are retained in the experiment log. The report remains a Lab
 1-only draft for the student to review and understand. No later-stage work has
 been started, and passing checks does not count as the user's approval.
+
+## Lab 2 interaction record — 2026-11-27
+
+The Lab 2 task brief came from the student. Codex inspected the existing
+Lab 2 placeholder, reviewed the author implementations and checkpoint
+options, built the TVSum preparation and evaluation code, and ran the
+smoke and full experiments on the student's Apple Silicon Mac. The
+pretrained ResNet graph, weights, regional similarity, and temporal
+comparator are from the ViSiL authors. Codex wrote the compatibility
+loader, deterministic clip protocol, ranking, plotting, verification
+and tests. The repository's existing conversation export tool was
+reused.
+
+The full run produced a measured 10/10 Top-3 Hit Rate from 200 scores.
+Codex ran 8 synthetic and 4 integration checks, inspected the figures,
+and drafted the standalone Lab 2 report with exported measurements.
+The resource and compatibility failures and recovery are recorded in
+the [experiment log](experiment_log.md).
+
+The genuine Lab 2 session is
+`01a21946-5519-73e3-86fc-5a8a188297f3`. The ignored local directory
+`docs/ai_logs/lab2/` contains the original task attachment, the
+verbatim JSONL snapshot, a visible-message Markdown extraction, and
+provenance including the raw SHA-256. The snapshot covers the
+conversation up to the export time. Refresh the snapshot after the
+turn is idle to include the final response by running this command
+from the repository root.
+
+```bash
+python3 tools/export_visible_conversation.py \
+  "$HOME/.codex/sessions/2026/11/27/rollout-2026-11-27T03-12-49-01a21946-5519-73e3-86fc-5a8a188297f3.jsonl" \
+  --output-dir docs/ai_logs/lab2
+```
+
+The visible-message export is suitable for the student to review before
+submission. The raw snapshot includes tool calls and results and stays
+local.
