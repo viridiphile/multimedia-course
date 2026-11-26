@@ -1,0 +1,3 @@
+# Generated videos stay on the machine used to run Lab 3.
+*.mp4
+*.h5
