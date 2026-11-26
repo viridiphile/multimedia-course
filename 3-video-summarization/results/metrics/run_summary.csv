@@ -1,0 +1,2 @@
+source_id,source_title,source_filename,source_frames,source_duration_seconds,source_fps,width,height,checkpoint,feature_key,feature_count,feature_dim,feature_pick_stride,selected_segments,frame_budget,selected_source_frames,summary_frames,summary_seconds,summary_ratio,output_format,no_audio,validation_passed
+EYqVtI9YWJA,Smage Bros. Motorcycle Stunt Show,EYqVtI9YWJA.mp4,5939,198.16463333333334,30000/1001,540,360,pretrain_af_basic/checkpoint/tvsum.yml.3.pt,video_42,396,1024,15,12,890,890,890,29.69633333333333,0.14985687826233374,MP4/H.264,True,True

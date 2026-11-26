@@ -1,0 +1,101 @@
+{
+  "source": {
+    "filename": "EYqVtI9YWJA.mp4",
+    "frame_count": 5939,
+    "fps_numerator": 30000,
+    "fps_denominator": 1001,
+    "duration_seconds": 198.16463333333334,
+    "width": 540,
+    "height": 360,
+    "codec": "h264",
+    "format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "audio_streams": 1,
+    "max_timestamp_drift_seconds": 0.0,
+    "video_id": "EYqVtI9YWJA",
+    "title": "Smage Bros. Motorcycle Stunt Show",
+    "category": "BT",
+    "source_url": "https://www.youtube.com/watch?v=EYqVtI9YWJA",
+    "sha256": "6ffcc966ab00a6096d7b256cffd09408efa7db376df7732644f875b8ff27f390",
+    "size_bytes": 10713251
+  },
+  "features": {
+    "file": "eccv16_dataset_tvsum_google_pool5.h5",
+    "file_size_bytes": 125126256,
+    "sha256": "ec9cbcc715887d30ba2ad46764cb810f07eb6d6241e96c0eac5fca51d398228b",
+    "key": "video_42",
+    "shape": [
+      396,
+      1024
+    ],
+    "fields": [
+      "change_points",
+      "features",
+      "gtscore",
+      "gtsummary",
+      "n_frame_per_seg",
+      "n_frames",
+      "n_steps",
+      "picks",
+      "user_summary"
+    ],
+    "n_frames": 5939,
+    "hdf5_shots": 40,
+    "first_pick": 0,
+    "last_pick": 5925,
+    "pick_intervals": [
+      15
+    ],
+    "annotation_shape": [
+      20,
+      5939
+    ],
+    "sampled_annotation_score_pearson_r": 0.9999999999999982,
+    "fold_role": "test"
+  },
+  "model": {
+    "name": "DSNet anchor-free basic attention",
+    "revision": "1804176e2e8b57846beb063667448982273fca89",
+    "fold_index": 3,
+    "checkpoint": "pretrain_af_basic/checkpoint/tvsum.yml.3.pt",
+    "checkpoint_bytes": 17315936,
+    "checkpoint_sha256": "93112811c36c8a841f05ee7b6e18f6c3526647c0d12b0b74a96e49bacc98606b",
+    "attention_heads": 8,
+    "hidden_dim": 128,
+    "nms_threshold": 0.4,
+    "device": "cpu",
+    "pytorch": "2.8.0"
+  },
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "pyav": "15.1.0",
+    "ffmpeg": "7.1"
+  },
+  "nms_kept_detections": 35,
+  "selected_segments": 12,
+  "selection_adjustment": "none",
+  "summary_sha256": "535893da98c3540aae75451813604d2a3aaece799a8be0c9fbeaa6ff3c26743a",
+  "validation_passed": true,
+  "selected_source_frames": 890,
+  "total_source_frames": 5939,
+  "frame_budget": 890,
+  "summary_ratio": 0.14985687826233374,
+  "summary": {
+    "filename": "summary.mp4",
+    "frame_count": 890,
+    "fps_numerator": 30000,
+    "fps_denominator": 1001,
+    "duration_seconds": 29.69633333333333,
+    "width": 540,
+    "height": 360,
+    "codec": "h264",
+    "format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "audio_streams": 0,
+    "max_timestamp_drift_seconds": 0.0
+  },
+  "no_audio": true,
+  "decoded_frame_matches": 890,
+  "mean_frame_luma_error": 0.2338418123179359,
+  "max_frame_luma_error": 0.45949074074074076,
+  "frame_luma_error_limit": 4.0
+}

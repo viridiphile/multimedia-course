@@ -1,0 +1,29 @@
+{
+  "validation_passed": true,
+  "selected_source_frames": 890,
+  "total_source_frames": 5939,
+  "frame_budget": 890,
+  "summary_ratio": 0.14985687826233374,
+  "summary": {
+    "filename": "summary.mp4",
+    "frame_count": 890,
+    "fps_numerator": 30000,
+    "fps_denominator": 1001,
+    "duration_seconds": 29.69633333333333,
+    "width": 540,
+    "height": 360,
+    "codec": "h264",
+    "format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "audio_streams": 0,
+    "max_timestamp_drift_seconds": 0.0
+  },
+  "no_audio": true,
+  "decoded_frame_matches": 890,
+  "mean_frame_luma_error": 0.2338418123179359,
+  "max_frame_luma_error": 0.45949074074074076,
+  "frame_luma_error_limit": 4.0,
+  "selected_segments": 12,
+  "predictions_checked": 396,
+  "nms_detections_checked": 35,
+  "figures_checked": 4
+}
