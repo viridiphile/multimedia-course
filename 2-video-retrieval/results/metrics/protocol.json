@@ -1,0 +1,334 @@
+{
+  "profile": "full",
+  "gallery_ids": [
+    "EE-bNr36nyA",
+    "Se3oxnaPsz0",
+    "EYqVtI9YWJA",
+    "JgHubY5Vw3Y",
+    "-esJrBWj2d8",
+    "E11zDS9XGzg",
+    "JKpqYvAdIsw",
+    "VuWGsYPqAX8",
+    "0tmA_C6XwfM",
+    "3eYKfiOEJNs",
+    "37rzWOQsNIw",
+    "Hl-__g2gn_A",
+    "GsAD1KT1xo8",
+    "PJrm840pAUI",
+    "4wU_LUjG5Ic",
+    "91IHQYk1IQM",
+    "98MoyGZKHXc",
+    "AwmHb44_ouw",
+    "HT5vyqe0Xaw",
+    "akI8YFjEmUw"
+  ],
+  "queries": [
+    {
+      "query_id": "EE-bNr36nyA__clip",
+      "source_id": "EE-bNr36nyA",
+      "category": "BK",
+      "start_seconds": 21,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "EE-bNr36nyA"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/EE-bNr36nyA__clip-8831ff649cf9d471.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 479,
+        "duration_seconds": 15.982633333333334,
+        "sha256": "5cf5c1d446414f3cdcffa0ad977e6543fdb26f571214cb716ce83df501f54277"
+      },
+      "decoded_frames": 479,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "EYqVtI9YWJA__clip",
+      "source_id": "EYqVtI9YWJA",
+      "category": "BT",
+      "start_seconds": 82,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "EYqVtI9YWJA"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/EYqVtI9YWJA__clip-08c549ade25ecfa5.mp4",
+      "clip_metadata": {
+        "width": 330,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 480,
+        "duration_seconds": 16.016000000000002,
+        "sha256": "860d1fe3f27b5b2ff7f931c44126e1c8d5b4bffaf64ace0d6bb0b45b47662172"
+      },
+      "decoded_frames": 480,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "-esJrBWj2d8__clip",
+      "source_id": "-esJrBWj2d8",
+      "category": "DS",
+      "start_seconds": 139,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "-esJrBWj2d8"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/-esJrBWj2d8__clip-6a01c23bba21c67c.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 30.0,
+        "frame_count": 480,
+        "duration_seconds": 16.0,
+        "sha256": "c3c1ca7b0da66073acd0b88e06a4e87e426b8de7dcb6aeaa2a9a300a9eb37624"
+      },
+      "decoded_frames": 480,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "JKpqYvAdIsw__clip",
+      "source_id": "JKpqYvAdIsw",
+      "category": "FM",
+      "start_seconds": 34,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "JKpqYvAdIsw"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/JKpqYvAdIsw__clip-bbacf1739f696f92.mp4",
+      "clip_metadata": {
+        "width": 294,
+        "height": 240,
+        "fps": 25.0,
+        "frame_count": 400,
+        "duration_seconds": 16.0,
+        "sha256": "77a5fc124f46f8fe2d0aed5d4966c2e69cc6e91672433ab614e7ef31132fb0a7"
+      },
+      "decoded_frames": 400,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "0tmA_C6XwfM__clip",
+      "source_id": "0tmA_C6XwfM",
+      "category": "GA",
+      "start_seconds": 56,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "0tmA_C6XwfM"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/0tmA_C6XwfM__clip-467fb931b6d754ad.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 25.0,
+        "frame_count": 400,
+        "duration_seconds": 16.0,
+        "sha256": "bba25142b0c46572440b62ffc128ef7d41286bf1d5cc9950dd737796e82d45ec"
+      },
+      "decoded_frames": 400,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "37rzWOQsNIw__clip",
+      "source_id": "37rzWOQsNIw",
+      "category": "MS",
+      "start_seconds": 114,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "37rzWOQsNIw"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/37rzWOQsNIw__clip-8cf0b46f9efaff2e.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 480,
+        "duration_seconds": 16.016000000000002,
+        "sha256": "3d8ed2e37e8be0f60309db7165963c8f2158b0f8a3af70cff194c3613bfa533e"
+      },
+      "decoded_frames": 480,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "GsAD1KT1xo8__clip",
+      "source_id": "GsAD1KT1xo8",
+      "category": "PK",
+      "start_seconds": 32,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "GsAD1KT1xo8"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/GsAD1KT1xo8__clip-52dd7fa7c14d5191.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 479,
+        "duration_seconds": 15.982633333333334,
+        "sha256": "55cf470229771d45f88d3affa7813b78490137b8b0df741bc527f4a8e2ee38b3"
+      },
+      "decoded_frames": 479,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "4wU_LUjG5Ic__clip",
+      "source_id": "4wU_LUjG5Ic",
+      "category": "PR",
+      "start_seconds": 68,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "4wU_LUjG5Ic"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/4wU_LUjG5Ic__clip-b4bd0ff0c2d741bf.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 23.976023976023978,
+        "frame_count": 383,
+        "duration_seconds": 15.974291666666666,
+        "sha256": "2927087fcb0c77912768d67bdf97b389775819f6ca83af6cb55c843d6a5be8be"
+      },
+      "decoded_frames": 383,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "98MoyGZKHXc__clip",
+      "source_id": "98MoyGZKHXc",
+      "category": "VT",
+      "start_seconds": 111,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "98MoyGZKHXc"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/98MoyGZKHXc__clip-d77781d7fab009c5.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 25.0,
+        "frame_count": 400,
+        "duration_seconds": 16.0,
+        "sha256": "c9bbe8b40c9220960a772905dca8752b1b90d1586d6b4ebc41e6b681de77ba6d"
+      },
+      "decoded_frames": 400,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "HT5vyqe0Xaw__clip",
+      "source_id": "HT5vyqe0Xaw",
+      "category": "VU",
+      "start_seconds": 77,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "HT5vyqe0Xaw"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/HT5vyqe0Xaw__clip-f3da27813d83337d.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 480,
+        "duration_seconds": 16.016000000000002,
+        "sha256": "42d878a969f5e10d31191ff953d693fa3dd4535305b61f9e5503c44fe4c6b258"
+      },
+      "decoded_frames": 480,
+      "sampled_frames": 16
+    }
+  ],
+  "relevance": "Same TVSum source as the query's overlapping clip",
+  "tie_break": "Ascending candidate ID for equal scores",
+  "selection": "Two lexicographically first IDs per category, first used as query source",
+  "frame_sampling": "Every round(fps) decoded frames, starting at frame zero",
+  "query_start_rule": "round(fraction * (source_seconds - 16)); 25%, 45%, 65% cycle",
+  "gallery_decode": {
+    "EE-bNr36nyA": {
+      "decoded_frames": 2941,
+      "sampled_frames": 99
+    },
+    "Se3oxnaPsz0": {
+      "decoded_frames": 4166,
+      "sampled_frames": 139
+    },
+    "EYqVtI9YWJA": {
+      "decoded_frames": 5939,
+      "sampled_frames": 198
+    },
+    "JgHubY5Vw3Y": {
+      "decoded_frames": 4304,
+      "sampled_frames": 144
+    },
+    "-esJrBWj2d8": {
+      "decoded_frames": 6912,
+      "sampled_frames": 231
+    },
+    "E11zDS9XGzg": {
+      "decoded_frames": 15307,
+      "sampled_frames": 511
+    },
+    "JKpqYvAdIsw": {
+      "decoded_frames": 3802,
+      "sampled_frames": 153
+    },
+    "VuWGsYPqAX8": {
+      "decoded_frames": 5412,
+      "sampled_frames": 217
+    },
+    "0tmA_C6XwfM": {
+      "decoded_frames": 3532,
+      "sampled_frames": 142
+    },
+    "3eYKfiOEJNs": {
+      "decoded_frames": 4853,
+      "sampled_frames": 195
+    },
+    "37rzWOQsNIw": {
+      "decoded_frames": 5742,
+      "sampled_frames": 192
+    },
+    "Hl-__g2gn_A": {
+      "decoded_frames": 5846,
+      "sampled_frames": 244
+    },
+    "GsAD1KT1xo8": {
+      "decoded_frames": 4356,
+      "sampled_frames": 146
+    },
+    "PJrm840pAUI": {
+      "decoded_frames": 6580,
+      "sampled_frames": 275
+    },
+    "4wU_LUjG5Ic": {
+      "decoded_frames": 4005,
+      "sampled_frames": 167
+    },
+    "91IHQYk1IQM": {
+      "decoded_frames": 3312,
+      "sampled_frames": 111
+    },
+    "98MoyGZKHXc": {
+      "decoded_frames": 4688,
+      "sampled_frames": 188
+    },
+    "AwmHb44_ouw": {
+      "decoded_frames": 10597,
+      "sampled_frames": 354
+    },
+    "HT5vyqe0Xaw": {
+      "decoded_frames": 9671,
+      "sampled_frames": 323
+    },
+    "akI8YFjEmUw": {
+      "decoded_frames": 3995,
+      "sampled_frames": 134
+    }
+  }
+}

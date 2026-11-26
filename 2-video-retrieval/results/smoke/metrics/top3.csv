@@ -1,0 +1,7 @@
+query_id,source_id,candidate_id,rank,similarity_score,relevant,top3_success
+EE-bNr36nyA__clip,EE-bNr36nyA,EE-bNr36nyA,1,0.9069822430610657,True,True
+EE-bNr36nyA__clip,EE-bNr36nyA,Se3oxnaPsz0,2,-0.7678242325782776,False,True
+EE-bNr36nyA__clip,EE-bNr36nyA,JgHubY5Vw3Y,3,-0.9031437039375305,False,True
+EYqVtI9YWJA__clip,EYqVtI9YWJA,EYqVtI9YWJA,1,0.8729809522628784,True,True
+EYqVtI9YWJA__clip,EYqVtI9YWJA,Se3oxnaPsz0,2,-0.9016236662864685,False,True
+EYqVtI9YWJA__clip,EYqVtI9YWJA,JgHubY5Vw3Y,3,-0.905419111251831,False,True

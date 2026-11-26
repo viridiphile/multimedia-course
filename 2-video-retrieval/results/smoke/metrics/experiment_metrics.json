@@ -1,0 +1,31 @@
+{
+  "successful_queries": 2,
+  "total_queries": 2,
+  "top3_hit_rate": 1.0,
+  "profile": "smoke",
+  "gallery_count": 4,
+  "total_source_videos": 50,
+  "dataset_bytes": 681259038,
+  "source_duration_seconds": 12581.99738827729,
+  "scored_pairs": 8,
+  "device": "cpu",
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "elapsed_seconds": 24.931,
+  "model": {
+    "name": "ViSiL (authors' published TensorFlow ResNet-50 inference graph)",
+    "upstream_revision": "0971e54fb8325fceb1bc9748ecbfe4c66e5dabd2",
+    "checkpoint": "ckpt/resnet/model",
+    "checkpoint_sha256": {
+      "model.index": "84169ac6f98b7ff375ed7a130ce45276bbe2d3d8f3901bfd26bf54ee8ff4efb1",
+      "model.data-00000-of-00001": "9b45ee5022406713b083a6ce31cfa354bc4ad03678e8015259727c214a30dbea",
+      "model.meta": "e419d7bf63b3a1507253b52e95f70ee7f4185e91ed01aaa8240a004bb0e91f4b"
+    },
+    "tensorflow": "2.16.2",
+    "batch_size": 16,
+    "regional_dim": 3840,
+    "frame_regions": 9,
+    "preprocessing": "Embedded RGB preprocessing, 256px short edge, 224px center crop",
+    "similarity": "Directional Chamfer, learned temporal comparator, directional Chamfer"
+  }
+}

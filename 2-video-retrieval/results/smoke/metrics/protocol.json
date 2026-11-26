@@ -1,0 +1,78 @@
+{
+  "profile": "smoke",
+  "gallery_ids": [
+    "EE-bNr36nyA",
+    "Se3oxnaPsz0",
+    "EYqVtI9YWJA",
+    "JgHubY5Vw3Y"
+  ],
+  "queries": [
+    {
+      "query_id": "EE-bNr36nyA__clip",
+      "source_id": "EE-bNr36nyA",
+      "category": "BK",
+      "start_seconds": 21,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "EE-bNr36nyA"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/EE-bNr36nyA__clip-8831ff649cf9d471.mp4",
+      "clip_metadata": {
+        "width": 392,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 479,
+        "duration_seconds": 15.982633333333334,
+        "sha256": "5cf5c1d446414f3cdcffa0ad977e6543fdb26f571214cb716ce83df501f54277"
+      },
+      "decoded_frames": 479,
+      "sampled_frames": 16
+    },
+    {
+      "query_id": "EYqVtI9YWJA__clip",
+      "source_id": "EYqVtI9YWJA",
+      "category": "BT",
+      "start_seconds": 82,
+      "duration_seconds": 16,
+      "relevant_ids": [
+        "EYqVtI9YWJA"
+      ],
+      "transform": "Remove left ~8% of frame, scale to 240 pixels high, H.264 CRF 26, mute",
+      "file": "data/queries/EYqVtI9YWJA__clip-08c549ade25ecfa5.mp4",
+      "clip_metadata": {
+        "width": 330,
+        "height": 240,
+        "fps": 29.97002997002997,
+        "frame_count": 480,
+        "duration_seconds": 16.016000000000002,
+        "sha256": "860d1fe3f27b5b2ff7f931c44126e1c8d5b4bffaf64ace0d6bb0b45b47662172"
+      },
+      "decoded_frames": 480,
+      "sampled_frames": 16
+    }
+  ],
+  "relevance": "Same TVSum source as the query's overlapping clip",
+  "tie_break": "Ascending candidate ID for equal scores",
+  "selection": "Two lexicographically first IDs per category, first used as query source",
+  "frame_sampling": "Every round(fps) decoded frames, starting at frame zero",
+  "query_start_rule": "round(fraction * (source_seconds - 16)); 25%, 45%, 65% cycle",
+  "gallery_decode": {
+    "EE-bNr36nyA": {
+      "decoded_frames": 2941,
+      "sampled_frames": 99
+    },
+    "Se3oxnaPsz0": {
+      "decoded_frames": 4166,
+      "sampled_frames": 139
+    },
+    "EYqVtI9YWJA": {
+      "decoded_frames": 5939,
+      "sampled_frames": 198
+    },
+    "JgHubY5Vw3Y": {
+      "decoded_frames": 4304,
+      "sampled_frames": 144
+    }
+  }
+}
